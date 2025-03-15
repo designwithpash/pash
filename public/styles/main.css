@@ -935,11 +935,14 @@ dotLottie-Player{
     #quote{
         display: none;
     }
+    .center{
+        display:block;
+    }
     .desi{
         display: flex;
     }
     .circle,.circle2,.circle3,.circle4{
-        display: none;
+        justify-content: flex-start;
     }
     .skill-icon{
         display: flex;
