@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
             delay:2000,
             pauseOnMouseEnter:true,
         },
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         centeredSlides: false, // Align slides properly
         pagination: {
             el: ".swiper-pagination",
@@ -34,6 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 5, // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:false,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         centeredSlides: true, // Align slides properly
         pagination: {
             el: ".swiper-pagination",
@@ -59,6 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 3, // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:false,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         centeredSlides:false,// Align slides properly
         pagination: {
             el: ".swiper-pagination",
@@ -87,6 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:true,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         autoplay:{
             delay:2000,
             pauseOnMouseEnter:true,
@@ -116,6 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:true,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         autoplay:{
             delay:2000,
             pauseOnMouseEnter:true,
@@ -145,6 +180,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:false,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         centeredSlides: false, // Align slides properly
         pagination: {
             el: ".swiper-pagination",
@@ -170,6 +212,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:true,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         autoplay:{
             delay:2000,
             pauseOnMouseEnter:true,
@@ -199,6 +248,13 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 3, // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
         loop:true,
+        lazy: {
+            loadPrevNext: true,
+            loadOnTransitionStart: true,
+        },
+        preloadImages: false,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         autoplay:{
             delay:2000,
             pauseOnMouseEnter:true,
