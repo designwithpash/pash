@@ -74,6 +74,17 @@ document.addEventListener("DOMContentLoaded", function () {
           document.body.style.overflow=""
       }
   });
+  function updateClass() {
+    let element = document.querySelector(".swiper-wrapper"); // Select the element
+    if (window.innerWidth < 768) { 
+        element.classList.remove("center"); // Remove class on small screens
+    } else {
+        element.classList.add("center"); // Add class on large screens
+    }}
+    updateClass();
+    window.addEventListener("resize", updateClass);
+
+
   
 
 });
