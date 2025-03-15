@@ -1,0 +1,35 @@
+<div class="portfolio " id="portfolio">
+    <h2 class="margin">Portfolio</h2>
+    <div class="buttons">
+  <div class="btn-wrapper">
+    <button class="secondary-btn active" data-filter="web">Web designs</button>
+    <button class="secondary-btn" data-filter="app">App designs</button>
+    <button class="secondary-btn" data-filter="print">Print Materials</button>
+    <button class="secondary-btn" data-filter="convert">CRO</button>
+    <button class="secondary-btn" data-filter="prototype">
+      Interactive prototypes
+    </button>
+    <button class="secondary-btn" data-filter="ads">Facebook ads</button>
+    <button class="secondary-btn" data-filter="social">
+      Social media posts
+    </button>
+  </div>
+</div>
+  <div><%- include("../partials/portfolio/web.ejs") %></div>
+  <div><%- include("../partials/portfolio/app.ejs") %></div>
+  <div><%- include("../partials/portfolio/cro.ejs") %></div>
+  <div><%- include("../partials/portfolio/ads.ejs") %></div>
+  <div><%- include("../partials/portfolio/print.ejs") %></div>
+  <div><%- include("../partials/portfolio/prototype.ejs") %></div>
+  <div><%- include("../partials/portfolio/social.ejs") %></div>
+
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+        <img id="close-btn" src="/images/close.svg" alt="Close">
+        <img id="lightbox-img" src="" alt="Preview">
+    </div>
+</div>
+
+  
+  </div>
+ 
