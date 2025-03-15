@@ -59,7 +59,10 @@ h3{
 h3{
     color: var(--primary-orange);
 } */
-
+.nav-global{
+    display: flex;
+    justify-content: center;
+}
 p{
     font-size: var(--body-font);
     font-weight: 500;
@@ -144,7 +147,7 @@ a{
     position: fixed;
     padding: 1rem;
     z-index: 100;
-    left:33%;
+   
     top:1%;
 }
 .hero{
