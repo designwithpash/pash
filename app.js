@@ -31,6 +31,7 @@ app.get("/", (req, res) => {
 });
 
 // Start server
-app.listen(port, () => {
-    console.log(`⚡ Listening on http://localhost:${port}`);
+app.listen(3000, "0.0.0.0", () => {
+    console.log("Listening on http://0.0.0.0:3000");
 });
+
