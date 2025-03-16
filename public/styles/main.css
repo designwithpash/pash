@@ -936,13 +936,13 @@ dotLottie-Player{
         display: none;
     }
     .center{
-        display:block;
+        justify-content: flex-start;
     }
     .desi{
         display: flex;
     }
     .circle,.circle2,.circle3,.circle4{
-        justify-content: flex-start;
+        display: none;
     }
     .skill-icon{
         display: flex;
