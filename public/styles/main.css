@@ -959,6 +959,9 @@ dotLottie-Player{
     .f-flex{
         flex-direction: column;
     }
+    .footer{
+        margin-bottom: 5.5rem;
+    }
   }
   @media(hover:none){
     .process-card:hover {
