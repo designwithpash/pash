@@ -685,6 +685,7 @@ dotLottie-Player{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
   @media (max-width: 720px){
 
     #h-image{
@@ -957,7 +958,14 @@ dotLottie-Player{
     .f-flex{
         flex-direction: column;
     }
+    /* .process-card:hover{
+        box-shadow: none;
+        transition: none;
+        background: none;
+        z-index: 0;
+    } */
   }
+
   @media(hover:none){
     .process-card:hover {
         pointer-events: none !important;
