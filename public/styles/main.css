@@ -64,6 +64,7 @@ h3{
 .nav-global{
     display: flex;
     justify-content: center;
+    z-index: 99999;
 }
 p{
     font-size: var(--body-font);
