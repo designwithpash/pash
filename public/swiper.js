@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var swiperOne = new Swiper(".mySwiper", {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
-        loop:true,
+        loop:false,
         autoplay:{
             delay:2000,
             pauseOnMouseEnter:true,
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var swiperFour = new Swiper(".mySwiper4", {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
-        loop:true,
+        loop:false,
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var swiperFive = new Swiper(".mySwiper5", {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
-        loop:true,
+        loop:false,
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var swiperSeven = new Swiper(".mySwiper7", {
         slidesPerView: "auto", // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
-        loop:true,
+        loop:false,
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var swiperNine = new Swiper(".mySwiper9", {
         slidesPerView: 3, // Show as many slides as fit
         spaceBetween: 10, // Adjust spacing
-        loop:true,
+        loop:false,
         lazy: {
             loadPrevNext: true,
             loadOnTransitionStart: true,
