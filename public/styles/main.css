@@ -354,7 +354,7 @@ a{
    
 }
 .swiper {
-    display: none!important; /* Hide all swipers by default */
+    display: none; /* Hide all swipers by default */
 }
 
 .swiper[data-item="web"] {
