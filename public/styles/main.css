@@ -22,12 +22,14 @@
     font-family: "visby-cf";
     src: url("../font/VisbyCF-Bold.otf");
     font-weight: 800;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "visby-cf";
     src: url("../font/VisbyCF-Medium.otf");
     font-weight: 500;
+    font-display: swap;
 }
 
 html {
@@ -231,6 +233,7 @@ a{
 }
 .icon-size{
     width: 40px;
+    height:40px
 }
 .primary-btn:hover{
     background:var(--hover);
@@ -952,6 +955,7 @@ dotLottie-Player{
     }
     .small{
         width: 30px;
+        height:30px
     }
     #c-image{
         width: 200px;
