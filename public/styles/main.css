@@ -485,6 +485,9 @@ a{
   .sm{
     gap: 0.1rem;
   }
+  #figma{
+    width:38px;
+}
 
   .skillset{
     /* background: var(--box-grey); */
@@ -939,6 +942,10 @@ dotLottie-Player{
         min-width: 70%;
         padding: 1rem;
     }
+    #figma{
+        width:25px;
+    }
+    
     #quote{
         display: none;
     }
