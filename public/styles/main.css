@@ -180,6 +180,7 @@ a{
 }
 #h-image{
     width: 400px;
+    height:400px;
     margin-top: 2rem;
 }
 
@@ -692,6 +693,7 @@ dotLottie-Player{
     #h-image{
         margin-top: 1rem;
         width:200px;
+        height:200px;
         
     }
     .bottom-sticky{
