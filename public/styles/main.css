@@ -955,6 +955,9 @@ dotLottie-Player{
     #c-image{
         width: 200px;
     }
+    .footer{
+        margin-bottom:5.5rem;
+    }
 
     .f-flex{
         flex-direction: column;
