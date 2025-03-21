@@ -2,53 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design with pash</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="/styles/main.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Struggling to grow your business? Get custom designs that improve engagement, enhance branding, and drive sales. Let’s build something great together!">
+  <meta name="keywords" content="UX design, UI design, graphic design, brochure, ads, conversion rate, growth, flyer, booth, web design, app design">
+  <meta name="author" content="Pash">
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Growth-Driven Designs for Your Business Success">
+    <meta property="og:description" content="Boost your brand with high-impact designs. We create strategic, user-focused visuals to drive business growth.">
+    <meta property="og:image" content="images/MetaPreview.png">
+    <meta property="og:url" content="https://designwithpash.com">
+    <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Growth-Driven Designs for Your Business Success">
+  <meta name="twitter:description" content="Creative designs that elevate your brand and drive success.">
+  <meta name="twitter:image" content="images/MetaPreview.png">
+  <meta name="twitter:site" content="@designwithpash">
+  <title>Growth-Driven Designs for Your Business Success</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="/styles/main.css" rel="stylesheet">
   <!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
+  <script type="text/javascript">
     var _smartsupp = _smartsupp || {};
     _smartsupp.key = '1ae09b14644eaf3820e746ea1f3f0c38a2d913a0';
-    window.smartsupp||(function(d) {
-      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-      c.type='text/javascript';c.charset='utf-8';c.async=true;
-      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
     })(document);
-    </script>
-    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+  </script>
+  <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
 
 </head>
 
 <body>
-   <div class="nav-global">
+  <div class="nav-global">
     <nav class=" navigation wrapper">
-        <a href="/"><img src="images/PASHLOGO.png" width="150px"></a>
-        <label for="check">
-            <input type="checkbox" id="check"/> 
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        <div class="nav-right" id="nav">
+      <a href="/"><img src="images/PASHLOGO.png" width="150px"></a>
+      <label for="check">
+        <input type="checkbox" id="check" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="nav-right" id="nav">
         <div class="nav-links">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#process">How it works</a>
-        <a class="primary-btn" href=<%= call %>>Book a call</a></div>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#process">How it works</a>
+          <a class="primary-btn" href=<%=call %>>Book a call</a>
         </div>
       </div>
-    </nav>
-    <div class="bottom-sticky wrapper">
-      <a class="primary-btn" id="sticky-cta" href=<%= call %> target="_blank">Book a call</a></div>
+  </div>
+  </nav>
+  <div class="bottom-sticky wrapper">
+    <a class="primary-btn" id="sticky-cta" href=<%=call %> target="_blank">Book a call</a>
+  </div>
 
-  
-    
-    
+
+
+
 
 </body>
 
