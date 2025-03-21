@@ -32,6 +32,6 @@ app.get("/", (req, res) => {
 
 // Start server
 app.listen(3000, () => {
-    console.log("Listening on http://localhost:3000");
+    console.log("Listening on http://0.0.0.0:3000");
 });
 
