@@ -36,24 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (typeof swiperThree !== "undefined") swiperThree.update();
     if (typeof swiperFour !== "undefined") swiperFour.update();
   }
-  gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray(".fade-in").forEach((el, index) => {
-      gsap.to(el, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          rotate: 0,
-          duration: 1.2,
-          ease: "elastic.out(0.5, 0.5)",
-          delay: index * 0.2, // Staggered effect
-          scrollTrigger: {
-              trigger: el,
-              start: "top 90%", // Adjust based on scroll position
-              toggleActions: "play none none reverse",
-          },
-      });
-  });
   const menuCheckbox = document.getElementById("check");
   const navMenu = document.getElementById("nav");
   const links=document.querySelectorAll(".nav-links a")
