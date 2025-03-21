@@ -564,6 +564,9 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(15, 15, 15) 100%);
     position: absolute;
     left: -40%;
 }
+#figma{
+    width: 38px;
+}
 .circle2{
     width: 100px;
     height: 100px;
@@ -769,7 +772,9 @@ dotLottie-Player{
     .hamburger{
         display: flex;
     }
-   
+    #figma{
+        width:25px;
+    }
     label{
         display:flex;
          flex-direction:column;
