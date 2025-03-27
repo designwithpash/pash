@@ -9,6 +9,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
+
+
+
 // Setup LiveReload
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(join(__dirname, "public"));
@@ -25,8 +28,11 @@ app.set("view engine", "ejs");
 
 // Routes
 app.get("/", (req, res) => {
+    var currentYear = new Date();
+    
     res.render("index",{
-        call:"https://calendly.com/designwithpash/30min?month=2025-03"
+        call:"https://calendly.com/designwithpash/30min?month=2025-03",
+        date:currentYear.getFullYear()
     }); 
 });
 
