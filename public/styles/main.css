@@ -184,6 +184,7 @@ a{
 .right-content{
     margin: 0;
     display: flex;
+    
 }
 .left-content{
     max-width: 40%;
@@ -218,7 +219,9 @@ a{
 
 
 .primary-btn{
-    background-color: var(--primary-orange);
+    background: linear-gradient(270deg, #FF2B80 2.14%, #FF881F 102.54%);
+
+
     color: #fff;
     padding: 1rem 2rem;
     border-radius:10rem ;
@@ -231,10 +234,20 @@ a{
 .icon-size{
     width: 40px;
 }
+
+#highlight_two{
+    background: linear-gradient(270deg, #FF2B80 2.14%, #FF881F 102.54%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .primary-btn:hover{
-    background:var(--hover);
+  
     cursor: pointer;
-    transition: ease-in 0.3s;
+    transition: ease-in 0.1s;
+    box-shadow: 0px 14px 34px 0px rgba(255, 51, 121, 0.60);
 }
 .skill-content{
     margin-top: var(--section-gap);
@@ -671,6 +684,36 @@ dotLottie-Player{
     position: absolute;
     object-fit: cover;
     width: 100%;
+
+}
+.eyebrow{
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+.line{
+    width: 50%;
+    border: 1px solid #6d6d6d;
+}
+#stretch{
+    margin-bottom: 0.5rem;
+    letter-spacing:5px;
+    text-wrap: nowrap;
+    color: #6d6d6d;
+}
+.case{
+    padding:1rem;
+    gap: 1.5rem;
+    justify-content: center;
+   margin-top: var(--section-gap);
+    align-items: center;
+  
+   
+}
+.with-bg{
+    border-radius: 25px;
+    border: 1px solid #3C3C3C;
+    background: linear-gradient(126deg, #242424 15.49%, #1A1A1A 78.5%);
+    padding:1.5rem
 
 }
 
