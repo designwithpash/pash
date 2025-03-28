@@ -937,7 +937,10 @@ dotLottie-Player{
         padding: 0 0.5rem;
         margin-top: 0.5rem;
     }
-
+    .eyebrow p{
+        font-size:12px
+    }
+    
     .eyebrow{
         display: flex;
         justify-content: center;
@@ -945,6 +948,9 @@ dotLottie-Player{
     }
     .case{
         padding-bottom: 1rem;
+    }
+    .line{
+        display:none
     }
 
     .bg-video{
