@@ -1008,9 +1008,13 @@ dotLottie-Player{
     #test-break{
         display: block;
     }
-    #c-image{
-        width: 280px;
+    #c-image {
+        opacity: 0;
+        height: 0;
+        width: 0;
+        overflow: hidden;
     }
+    
     .footer{
         margin-bottom:5.5rem;
     }

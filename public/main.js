@@ -63,24 +63,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let hasPlayed = false; // Flag to check if video has played
+let hasPlayed = false; // Flag to track if the video has played
 
 document.addEventListener("scroll", function () {
-    if (hasPlayed) return; // Stop checking after first play
+    if (hasPlayed) return; // Stop checking if already played
 
     let video = document.getElementById("c-image");
     let section = document.getElementById("case");
+
+    if (!video) return; // Prevent errors if video is removed from DOM
+
     let rect = section.getBoundingClientRect();
     let windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
     if (rect.top < windowHeight && rect.bottom > 0) {
-        video.play();
-        hasPlayed = true; // Mark as played to prevent future plays
+        video.muted = true; // Ensure autoplay works on mobile
+        video.play().catch(error => console.log("Autoplay failed:", error));
+        hasPlayed = true;
     }
 });
 
 // Ensure video does not restart even if user scrolls back
 document.getElementById("c-image").addEventListener("ended", function () {
     this.pause();
-    
+   
 });
