@@ -62,9 +62,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// const lightbox = document.querySelectorAll(".swiper-slide")
-// lightbox.forEach(item=>{
-//     item.addEventListener("click", ()=>{
 
-//     })
-// })
+let hasPlayed = false; // Flag to check if video has played
+
+document.addEventListener("scroll", function () {
+    if (hasPlayed) return; // Stop checking after first play
+
+    let video = document.getElementById("c-image");
+    let section = document.getElementById("case");
+    let rect = section.getBoundingClientRect();
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top < windowHeight && rect.bottom > 0) {
+        video.play();
+        hasPlayed = true; // Mark as played to prevent future plays
+    }
+});
+
+// Ensure video does not restart even if user scrolls back
+document.getElementById("c-image").addEventListener("ended", function () {
+    this.pause();
+    
+});

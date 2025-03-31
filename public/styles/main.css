@@ -64,6 +64,7 @@ h3{
 .nav-global{
     display: flex;
     justify-content: center;
+    z-index: 5000;
 }
 p{
     font-size: var(--body-font);
@@ -135,7 +136,8 @@ a{
 }
 
 #c-image{
-    width: 350px;
+    width: 400px;
+    border-radius: 1.5rem;
 }
 #sticky-cta{
     width: 100%;
@@ -470,14 +472,9 @@ a{
     /* background: var(--box-grey); */
     padding: 1rem;
     border-radius: var(--box-radius);
-    cursor: pointer;
+    
   }
-  .icon-container:hover{
-    background: var(--box-grey);
-    box-shadow: 10px 50px 50px #000;
-    transition: ease 0.3s;
-  
-  }
+
 
   .line{
     /* width: 1px; */
@@ -642,13 +639,7 @@ dotLottie-Player{
     cursor: pointer;
     
 }
-.process-card:hover{
-    background: var(--box-grey);
-    box-shadow: 10px 50px 50px #000;
-    transition: ease 0.3s;
-   
-    z-index: 1000;
-}
+
 .process{
     background: #ffffff10; 
     -webkit-backdrop-filter: blur(30px);
@@ -1014,6 +1005,9 @@ dotLottie-Player{
     .small{
         width: 30px;
     }
+    #test-break{
+        display: block;
+    }
     #c-image{
         width: 200px;
     }
@@ -1023,6 +1017,9 @@ dotLottie-Player{
 
     .f-flex{
         flex-direction: column;
+    }
+    .reverse{
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(15, 15, 15) 100%);
     }
   }
 
