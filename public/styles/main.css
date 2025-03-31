@@ -701,7 +701,8 @@ dotLottie-Player{
     color: #6d6d6d;
 }
 .case{
-    padding:1rem;
+    max-width: fit-content;
+    padding:2rem;
     gap: 1.5rem;
     justify-content: center;
    margin-top: var(--section-gap);
