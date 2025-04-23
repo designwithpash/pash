@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (element) {
         const words = [
-            'UX/UI designer',
-            'Graphic designer',
-            'Motion designer'
+            'UX/UI Designer',
+            'Graphic Designer',
+            'Motion Designer'
         ];
         
         // Start typing animation
