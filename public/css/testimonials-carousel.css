@@ -185,6 +185,9 @@
         font-size: 1rem;
         line-height: 1.6;
     }
+    .testimonials-carousel{
+        padding:0px 0px;
+    }
 
     .client-image {
         width: 50px;

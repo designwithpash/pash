@@ -982,6 +982,7 @@ dotLottie-Player{
     }
     .testimonials-section{
         display: flex;
+        padding:0px 0px;
         overflow-x: auto;
         align-items: flex-start;
     }
@@ -1009,9 +1010,7 @@ dotLottie-Player{
         display: block;
     }
     #c-image {
-        opacity: 0;
-        height: 0;
-        width: 0;
+       
         overflow: hidden;
     }
     
