@@ -22,22 +22,23 @@
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="Growth-Driven Designs for Your Business Success">
     <meta property="og:description" content="Boost your brand with high-impact designs. We create strategic, user-focused visuals to drive business growth.">
-    <meta property="og:image" content="images/MetaPreview.png">
+    <meta property="og:image" content="/images/MetaPreview.png">
     <meta property="og:url" content="https://designwithpash.com">
     <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Growth-Driven Designs for Your Business Success">
   <meta name="twitter:description" content="Creative designs that elevate your brand and drive success.">
-  <meta name="twitter:image" content="images/MetaPreview.png">
+  <meta name="twitter:image" content="/images/MetaPreview.png">
   <meta name="twitter:site" content="@designwithpash">
   <title>Growth-Driven Designs for Your Business Success</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="/styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/typing.css">
   <link rel="stylesheet" href="/css/testimonials-carousel.css">
   <!-- Smartsupp Live Chat script -->
@@ -53,13 +54,18 @@
   </script>
   <noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
 
-
+  <script>
+    // Check if we're on the homepage or another page
+    function isHomePage() {
+      return window.location.pathname === '/' || window.location.pathname === '/index' || window.location.pathname === '/index.html';
+    }
+  </script>
 </head>
 
 <body>
   <div class="nav-global">
     <nav class=" navigation wrapper">
-      <a href="/"><img src="images/PASHLOGO.png" width="150px"></a>
+      <a href="/"><img src="/images/PASHLOGO.png" width="150px" alt="Pash Logo"></a>
       <label for="check">
         <input type="checkbox" id="check" />
         <span></span>
@@ -68,22 +74,39 @@
       </label>
       <div class="nav-right" id="nav">
         <div class="nav-links">
-          <a href="#portfolio">Portfolio</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#process">How it works</a>
-          <a class="primary-btn" href=<%=call %>>Book a call</a>
+          <a href="<% if (typeof isContactPage !== 'undefined' && isContactPage) { %>/#portfolio<% } else { %>#portfolio<% } %>">Portfolio</a>
+          <a href="<% if (typeof isContactPage !== 'undefined' && isContactPage) { %>/#testimonials<% } else { %>#testimonials<% } %>">Testimonials</a>
+          <a href="<% if (typeof isContactPage !== 'undefined' && isContactPage) { %>/#process<% } else { %>#process<% } %>">How it works</a>
+          <a class="primary-btn" href="/contact">Book a call</a>
         </div>
       </div>
   </div>
   </nav>
+  <% if (typeof isContactPage === 'undefined' || !isContactPage) { %>
   <div class="bottom-sticky wrapper">
-    <a class="primary-btn" id="sticky-cta" href=<%=call %> target="_blank">Book a call</a>
+    <a class="primary-btn" id="sticky-cta" href="/contact">Book a call</a>
   </div>
+  <% } %>
 
   <!-- Typing Animation -->
   <script src="/js/typing-animation.js"></script>
   <script src="/js/testimonials-carousel.js"></script>
 
+  <script>
+    // JavaScript solution to fix navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if we're NOT on the homepage
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index' && window.location.pathname !== '/index.html') {
+        // Fix navigation links by adding homepage path
+        const navLinks = document.querySelectorAll('.nav-links a:not(.primary-btn)');
+        navLinks.forEach(link => {
+          if (link.getAttribute('href').startsWith('#')) {
+            link.setAttribute('href', '/' + link.getAttribute('href'));
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

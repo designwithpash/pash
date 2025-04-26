@@ -1,2 +1,4 @@
-.DS_store
-node_modules
+.env
+node_modules/
+.DS_Store
+credentials/service-account.json

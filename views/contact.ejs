@@ -1,0 +1,9 @@
+<%
+// Set flag for contact page
+var isContactPage = true;
+%>
+<%- include("partials/header", { isContactPage: isContactPage }) %>
+<script src="/js/country-dropdown.js" defer></script>
+<%- include("sections/contact-form") %>
+<script src="/main.js"></script>
+<%- include("partials/footer") %> 

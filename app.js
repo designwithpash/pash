@@ -5,12 +5,15 @@ import connectLiveReload from "connect-livereload";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import SwipeListener from 'swipe-listener';
+import { appendFormData } from './utils/sheets.js';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
-
-
+// Set the views directory
+app.set('views', join(__dirname, 'views'));
+app.set("view engine", "ejs");
 
 // Setup LiveReload
 const liveReloadServer = livereload.createServer();
@@ -22,9 +25,7 @@ app.use(connectLiveReload());
 // Middleware
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true })); // If handling form submissions
-
-
-app.set("view engine", "ejs");
+app.use(express.json()); // Add this for JSON parsing
 
 // Routes
 app.get("/", (req, res) => {
@@ -34,6 +35,26 @@ app.get("/", (req, res) => {
         call:"https://calendly.com/designwithpash/30min?month=2025-03",
         date:currentYear.getFullYear()
     }); 
+});
+
+app.get("/contact", (req, res) => {
+    var currentYear = new Date();
+    res.render("contact", {
+        date: currentYear.getFullYear()
+    });
+});
+
+app.post("/contact", async (req, res) => {
+    try {
+        await appendFormData(req.body);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Error handling form submission:', error);
+        res.status(500).json({ 
+            success: false, 
+            error: 'Failed to save form data' 
+        });
+    }
 });
 
 // Start server
