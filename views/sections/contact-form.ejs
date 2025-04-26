@@ -1,20 +1,20 @@
 <section class="contact-section dark-form-section">
   <form class="contact-form" id="contactForm" method="POST" action="/contact">
-    <h2 class="form-title">Get in Touch</h2>
+    <h2 class="form-title">Let's Create Something Amazing Together!</h2>
     <div class="form-row">
       <div class="form-group">
         <label for="name">Your Name <span class="required">*</span></label>
-        <input type="text" id="name" name="name" required autocomplete="name" />
+        <input placeholder="e.g., John Doe" type="text" id="name" name="name" required autocomplete="name" />
       </div>
       <div class="form-group">
         <label for="org">Your Organization's Name <span class="required">*</span></label>
-        <input type="text" id="org" name="organization" required autocomplete="organization" />
+        <input placeholder="e.g., Google, Facebook, etc." type="text" id="org" name="organization" required autocomplete="organization" />
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
         <label for="email">Your Email <span class="required">*</span></label>
-        <input type="email" id="email" name="email" required autocomplete="email" />
+        <input placeholder="yourname@example.com" type="email" id="email" name="email" required autocomplete="email" />
       </div>
     </div>
     <div class="form-row">
@@ -49,23 +49,23 @@
     <div class="form-group">
       <label>What services are you interested in? <span class="required">*</span></label>
       <div class="checkbox-group" id="services-group">
-        <label><input type="checkbox" name="services" value="UX/UI Design" /> UX/UI Design</label>
-        <label><input type="checkbox" name="services" value="Graphic Design (Print Media, Ads)" /> Graphic Design (Print Media, Ads)</label>
+        <label><input type="checkbox" name="services" value="UX/UI Design" /> UX/UI Design (Web and app design) </label>
+        <label><input type="checkbox" name="services" value="Graphic Design (Print Media, Ads)" /> Graphic Design (Print Media,ads,social media posts, etc)</label>
         <label><input type="checkbox" name="services" value="CRO (Conversion Rate Optimization)" /> CRO (Conversion Rate Optimization)</label>
-        <label><input type="checkbox" name="services" value="Video Editing" /> Video Editing</label>
-        <label><input type="checkbox" name="services" value="Video Animation" /> Video Animation</label>
+        <label><input type="checkbox" name="services" value="Video Editing" /> Video Editing or Animation</label>
+       
       </div>
       <div class="error-message" id="services-error" style="display: none; color: #ff5c5c; font-size: 0.8rem; margin-top: 5px;">
         Please select at least one service
       </div>
     </div>
     <div class="form-group">
-      <label for="budget">What is your estimated budget for this project? <span class="required">*</span></label>
+      <label for="budget">What is your estimated budget for this project? (minimum budget to work with me is $499) <span class="required">*</span></label>
       <select id="budget" name="budget" required>
         <option value="">Select</option>
-        <option value="$500 - $1000">$500 - $1000</option>
-        <option value="$1000 - $2000">$1000 - $2000</option>
-        <option value="$2000 - $3000">$2000 - $3000</option>
+        <option value="$500 - $1000">$499 - $999</option>
+        <option value="$1000 - $2000">$1000 - $1999</option>
+        <option value="$2000 - $3000">$2000 - $2999</option>
         <option value="$3000+">$3000+</option>
       </select>
     </div>
