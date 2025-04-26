@@ -9,42 +9,59 @@ import { appendFormData } from './utils/sheets.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 // Set the views directory
 app.set('views', join(__dirname, 'views'));
 app.set("view engine", "ejs");
 
-// Setup LiveReload
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(join(__dirname, "public"));
-
-// Inject LiveReload middleware
-app.use(connectLiveReload());
+// Setup LiveReload only in development
+if (isDevelopment) {
+    const liveReloadServer = livereload.createServer();
+    liveReloadServer.watch(join(__dirname, "public"));
+    app.use(connectLiveReload());
+}
 
 // Middleware
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true })); // If handling form submissions
-app.use(express.json()); // Add this for JSON parsing
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Routes
-app.get("/", (req, res) => {
-    var currentYear = new Date();
-    
-    res.render("index",{
-        call:"https://calendly.com/designwithpash/30min?month=2025-03",
-        date:currentYear.getFullYear()
-    }); 
-});
-
-app.get("/contact", (req, res) => {
-    var currentYear = new Date();
-    res.render("contact", {
-        date: currentYear.getFullYear()
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).render('error', { 
+        message: 'Something broke!',
+        error: isDevelopment ? err : {}
     });
 });
 
-app.post("/contact", async (req, res) => {
+// Routes
+app.get("/", (req, res, next) => {
+    try {
+        var currentYear = new Date().getFullYear();
+        res.render("index", {
+            call: "https://calendly.com/designwithpash/30min?month=2025-03",
+            date: currentYear
+        });
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.get("/contact", (req, res, next) => {
+    try {
+        var currentYear = new Date().getFullYear();
+        res.render("contact", {
+            date: currentYear
+        });
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.post("/contact", async (req, res, next) => {
     try {
         await appendFormData(req.body);
         res.json({ success: true });
@@ -52,12 +69,20 @@ app.post("/contact", async (req, res) => {
         console.error('Error handling form submission:', error);
         res.status(500).json({ 
             success: false, 
-            error: 'Failed to save form data' 
+            error: isDevelopment ? error.message : 'Failed to save form data'
         });
     }
 });
 
+// Handle 404
+app.use((req, res) => {
+    res.status(404).render('error', { 
+        message: 'Page not found',
+        error: {}
+    });
+});
+
 // Start server
-app.listen(3000, () => {
-    console.log("Listening on http://0.0.0.0:3000");
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
 });
