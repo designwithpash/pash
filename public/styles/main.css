@@ -1,7 +1,7 @@
 :root{
     --primary-orange:#ff623a;
     --hover:#2d30ff;
-    --bg-black:#000000;
+    --bg-black:#191919;
     --box-grey:#1d1d1d;
     --dark-text:#0e0e0e;
     --text-color:#d4d4d4;
@@ -95,7 +95,7 @@ nav{
 }
 .nav-links{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
 }
 .hamburger{
@@ -450,7 +450,7 @@ a{
 
 .portfolio{
     padding: 40px 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 100%);
+
 }
 
 .portfolio-item {
